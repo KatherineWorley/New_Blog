@@ -9,6 +9,28 @@
   </head>
 
   <body>
+		<div id="sidebar">
+			<div id="logo">
+				<%= link_to root_path do %>
+					<%= image_tag "logo.png" %>
+				<% end %>
+			</div>
+
+			<ul>
+				<li class="category">Website</li>
+				<li><%= link_to "Blog", root_path %></li>
+				<li>About</li>
+			</ul>
+
+			<ul>
+				<li class="category">Social</li>
+				<li><a href="https://twitter.com/worleykatherine">Twitter</a></li>	
+				<li><a href="https://linkedin.com/in/katherineworley">LinkedIn</a></li>
+				<li><a href="https://github.com/katherineworley">GitHub</a></li>
+				<li><a href="mailto:me@katherineworley.com">Email</a></li>
+			</ul>
+		</div>
+
     <%= yield %>
   </body>
 </html>
