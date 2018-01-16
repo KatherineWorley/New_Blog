@@ -5,6 +5,17 @@
 		<p class="comment_time"><%= time_ago_in_words(comment.created_at) %> Ago</p>
 	</div>
 
+	<p class="body">
+		<%= @post.body %>
+	</p>
+
+	<div class="comments">
+		<h2><%= @post.comments.count %> Comments</h2>
+		<%= render @post.comments %>
+		<h3>Add a comment:</h3>
+		<%= render @comments/form %>
+	</div>
+
 	<% if user_signed_in? %>
 	<p><%= link_to 'Delete', [comment.post, comment],
 								  method: :delete,
